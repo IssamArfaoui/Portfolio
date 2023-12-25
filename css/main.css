@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+
+    } 
+}
+/* start head */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    z-index: 20;
+    position: fixed;
+    background-color: white;
+    left: 0;
+    right: 0;
+}
+
+.header .logo span:first-child {
+    color: black;
+}
+.header .logo span:last-child {
+    color: red;
+}
+.header i {
+    display: none;
+}
+.header ul {
+    display: flex;
+    list-style: none;
+}
+.header ul li {
+    padding: 12px;
+    border-radius: 20px; 
+}
+.header ul li a {
+    text-decoration: none;
+    color: black;
+}
+.header ul li:hover { 
+    background-color: rgba(233, 34, 34, 0.902);
+    transition: 1s;
+    box-shadow: 1px 1px 7px black;
+    padding: auto;
+}
+@media (max-width: 768px) {
+    .header {
+        background-color:bisque;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .header ul li a {
+        color: red;
+    }
+    .header ul {
+        display: none;
+        position: absolute;
+        /* background-color: blueviolet; */
+        top: 100%;
+        right: 0;
+        left: 0;
+        margin-top: 0;
+    }
+    .header ul:hover {
+        display: block;
+    }
+    .header i:hover + ul  {
+        display: block;
+    }
+    .header i {
+        display: block;
+        font-size: 20px;
+    }
+    .header ul li:first-child {
+        background-color: transparent;
+    }
+}
+ /* End head */
+
+ /* start landing  */
+.landing {
+    background: url(../images/bg-portfolio.jpg);
+    height: calc(100vh - 75px);
+    background-size: cover;
+    position: relative;
+ }
+.landing .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+}
+.landing .text h1 {
+    color: red;
+}
+.landing .text p {
+    width: 300px;
+}
+ /* end landing  */
+
+ /* start services */
+.text-parent {
+    letter-spacing: 5px;
+    font-size: 40px;
+    color: #64CCC5;
+    margin: 20px;
+    text-align: center;
+}
+ .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(300px,auto));  
+    gap: 20px;
+    text-align: center;
+}
+ .services .card {
+    background-color: #DAFFFB;
+    padding: 10px 20px;
+}
+.services .card i {
+    font-size: 40px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+ /* end services */
+
+ /* start about  */
+
+.about  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,250px);
+    justify-content: center;
+ }
+.about img {
+    width: 100%;
+    border-radius: 15px;
+}
+.about .text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+.about .text p {
+    text-align: justify;
+    font-size: 20px;
+}
+.about .text button {
+    background-color: #DAFFFB;
+    border-radius: 30px;
+    padding: 10px;
+    border: 1px solid red;
+    color: red;
+}
+
+ /* end about  */
+
+ /* start project  */
+.project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , 300px);
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+.project img {
+    width: 100%;
+}
+.project a {
+    display: block;
+    background-color: red;
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+
+ /* end project  */
+
+ /* start contact  */
+
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,300px);
+    justify-content: center;
+    align-items: center;
+}
+.contact-parent .contact iframe {
+    width: 100%;
+    height: 100%;
+}
+.contact .social i {
+    font-size: 40px;
+}
+.contact .social {
+    display: flex;
+    justify-content: center;
+}
+.contact .social .center div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+.contact .social .linkedin i {
+    color: blue;
+}
+ /* end contact  */
+
+ /* start footer  */
+
+.footer {
+    margin-top: 50px;
+    background-color: black;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p {
+    color: white;
+    font-weight: bold;
+}
+.footer span , i {
+    color: #64CCC5;
+}
+ /* end footer  */
