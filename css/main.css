@@ -38,9 +38,12 @@ body {
     align-items: center;
     z-index: 20;
     position: fixed;
-    background-color: white;
+    background-color: rgba(73, 71, 71, 0.4);
+    border-bottom: 1px solid white;
     left: 0;
     right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .header .logo span:first-child {
@@ -70,6 +73,9 @@ body {
     box-shadow: 1px 1px 7px black;
     padding: auto;
 }
+.header ul li a:hover {
+    color: white;
+}
 @media (max-width: 768px) {
     .header {
         background-color:bisque;
@@ -82,32 +88,35 @@ body {
     .header ul {
         display: none;
         position: absolute;
-        /* background-color: blueviolet; */
+        background-color: rgba(255, 255, 255, 0.7) ;
         top: 100%;
         right: 0;
         left: 0;
         margin-top: 0;
+        z-index: 1;
     }
-    .header ul:hover {
+    .header ul.test {
+        display: block;
+    }
+    /* .header ul:hover {
         display: block;
     }
     .header i:hover + ul  {
         display: block;
-    }
+    } */
     .header i {
         display: block;
         font-size: 20px;
     }
-    .header ul li:first-child {
-        background-color: transparent;
-    }
 }
+
  /* End head */
 
  /* start landing  */
 .landing {
     background: url(../images/bg-portfolio.jpg);
-    height: calc(100vh - 75px);
+    /* height: calc(100vh - 75px); */
+    height: calc(100vh);
     background-size: cover;
     position: relative;
  }
@@ -126,23 +135,31 @@ body {
 }
  /* end landing  */
 
- /* start services */
+/* classes */
 .text-parent {
     letter-spacing: 5px;
     font-size: 40px;
-    color: #64CCC5;
+    color: #BF3131;
     margin: 20px;
     text-align: center;
 }
- .services {
+
+/* classes */
+
+ /* start services */
+
+
+.services {
     display: grid;
     grid-template-columns: repeat(auto-fit ,minmax(300px,auto));  
     gap: 20px;
     text-align: center;
 }
  .services .card {
-    background-color: #DAFFFB;
+    background-color: #F31559;
     padding: 10px 20px;
+    border-radius: 15px;
+    color: black;
 }
 .services .card i {
     font-size: 40px;
@@ -176,11 +193,17 @@ html {
     font-size: 20px;
 }
 .about .text button {
-    background-color: #DAFFFB;
-    border-radius: 30px;
+    background-color: red;
+    border-radius: 10px;
     padding: 10px;
+    border: none; 
+    width: 75%;
+    cursor: pointer;
+}
+.about .text button:hover {
+    background: transparent;
+    color: black;
     border: 1px solid red;
-    color: red;
 }
 
  /* end about  */
@@ -206,18 +229,24 @@ html {
     border-radius: 10px;
     text-decoration: none;
 }
+.project a:hover  {
+    background: transparent;
+    border: 1px solid red;
+    color: black;
+    transition: .5s;
+}
 
 
  /* end project  */
 
  /* start contact  */
 
-
 .contact {
     display: grid;
     grid-template-columns: repeat(auto-fit ,300px);
     justify-content: center;
     align-items: center;
+    gap: 25px;
 }
 .contact-parent .contact iframe {
     width: 100%;
@@ -229,6 +258,7 @@ html {
 .contact .social {
     display: flex;
     justify-content: center;
+    gap: 50px;
 }
 .contact .social .center div {
     display: flex;
@@ -239,6 +269,20 @@ html {
 .contact .social .linkedin i {
     color: blue;
 }
+.contact .social .github i {
+    color: purple;
+}
+.contact .social .mail i {
+    color: red;
+}
+.contact .social .center div a {
+    text-decoration: none;
+    color: black;
+}
+@media (max-width: 768px) {
+
+}
+
  /* end contact  */
 
  /* start footer  */
@@ -255,7 +299,21 @@ html {
     color: white;
     font-weight: bold;
 }
-.footer span , i {
-    color: #64CCC5;
+.footer span , .footer i {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        background-color:black;
+        /* width: 450px; */
+        height: 120px;
+        position: relative;
+    }
+    .footer p {
+        position: absolute;
+        top: 0;
+    }
 }
  /* end footer  */
+
