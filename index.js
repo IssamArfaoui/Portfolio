@@ -19,6 +19,8 @@ let h1 = document.querySelectorAll('h1');
 let media = document.getElementsByClassName('media');
 let card = document.getElementsByClassName('card');
 let view = document.getElementsByClassName('view');
+let footer = document.getElementsByClassName('footer');
+let header = document.getElementsByClassName('header');
 
 
 
@@ -38,7 +40,6 @@ sun.addEventListener('click',function(){
         `
         darkimage.style.cssText =`
         background-color: #160040;
-        // height: 330vh;
         height: 100%;
         transition: 1s;
         `
@@ -68,9 +69,19 @@ sun.addEventListener('click',function(){
         for (let i=0 ; i<logo.length; i++) {
             logo[i].style.color='purple'         
         }
+       
         for (let i=0; i<h2.length; i++) {
             h2[i].style.color='white'
         }
+        footer[0].style.cssText=`
+        background-color: #160040;
+        transition: 1s;  
+        `
+        header[0].style.cssText=`
+        background: none;
+        transition: 1s;  
+        border: none;
+        `
         for (let i=0; i<p.length; i++) {
             if (p[i]==p[0]) {
                 continue;
@@ -83,8 +94,8 @@ sun.addEventListener('click',function(){
             }
             h1[i].style.color='white';
         }
-       
-       
+        
+   
         
     }
     else {
@@ -126,6 +137,15 @@ sun.addEventListener('click',function(){
         for (let i=0; i<h2.length; i++) {
             h2[i].style.color=''
         }
+        footer[0].style.cssText=`
+        background-color: '';
+        transition: 1s;  
+        `
+        header[0].style.cssText=`
+        background: '';
+        transition: 1s;  
+        border: '';
+        `
         for (let i=0; i<p.length; i++) {
             if (p[i]==p[0]) {
                 continue;
