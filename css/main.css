@@ -4,6 +4,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    
 }
 .container {
     margin-left: auto;
@@ -52,28 +53,30 @@ body {
 .header .logo span:last-child {
     color: red;
 }
-.header i {
+.header ul i {
+    font-size: 25px;
+    padding: 10px;
+    color: black;
+}
+.header #opens {
     display: none;
 }
 .header ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
-.header ul li {
+.header ul a{
     padding: 12px;
     border-radius: 20px; 
-}
-.header ul li a {
     text-decoration: none;
     color: black;
 }
-.header ul li:hover { 
+.header ul a:hover { 
     background-color: rgba(233, 34, 34, 0.902);
     transition: 1s;
     box-shadow: 1px 1px 7px black;
     padding: auto;
-}
-.header ul li a:hover {
     color: white;
 }
 @media (max-width: 768px) {
@@ -82,8 +85,9 @@ body {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .header ul li a {
+    .header ul a {
         color: red;
+        display: block;
     }
     .header ul {
         display: none;
@@ -98,15 +102,10 @@ body {
     .header ul.test {
         display: block;
     }
-    /* .header ul:hover {
-        display: block;
-    }
-    .header i:hover + ul  {
-        display: block;
-    } */
-    .header i {
+    .header #opens {
         display: block;
         font-size: 20px;
+        color: black;
     }
 }
 
@@ -115,10 +114,8 @@ body {
  /* start landing  */
 .landing {
     background: url(../images/bg-portfolio.jpg);
-    /* height: calc(100vh - 75px); */
-    height: calc(100vh);
+    height: 100vh ;
     background-size: cover;
-    position: relative;
  }
 .landing .text {
     position: absolute;
@@ -213,7 +210,7 @@ html {
     display: grid;
     grid-template-columns: repeat(auto-fit , 300px);
     justify-content: center;
-    gap: 10px;
+    gap: 40px;
     text-align: center;
 }
 .project img {
@@ -247,6 +244,7 @@ html {
     justify-content: center;
     align-items: center;
     gap: 25px;
+    /* margin-bottom: 50px; */
 }
 .contact-parent .contact iframe {
     width: 100%;
@@ -281,6 +279,7 @@ html {
 }
 @media (max-width: 768px) {
 
+
 }
 
  /* end contact  */
@@ -288,7 +287,7 @@ html {
  /* start footer  */
 
 .footer {
-    margin-top: 50px;
+    /* margin-top: 40px; */
     background-color: black;
     height: 100px;
     display: flex;
